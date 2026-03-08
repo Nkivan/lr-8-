@@ -1,9 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-///////////////////////
-// 1️⃣ The Internet Herokuapp
-///////////////////////
-
 test('Login with valid credentials', async ({ page }) => {
   await page.goto('https://the-internet.herokuapp.com/login');
 
@@ -23,10 +19,6 @@ test('Check checkbox', async ({ page }) => {
   await expect(checkbox).toBeChecked();
 });
 
-///////////////////////
-// 2️⃣ Wikipedia
-///////////////////////
-
 test('Search for Software testing', async ({ page }) => {
   await page.goto('https://en.wikipedia.org');
 
@@ -36,9 +28,6 @@ test('Search for Software testing', async ({ page }) => {
   await expect(page.locator('#firstHeading')).toContainText('Software testing');
 });
 
-///////////////////////
-// 3️⃣ Sauce Demo
-///////////////////////
 
 test('Login to SauceDemo', async ({ page }) => {
   await page.goto('https://www.saucedemo.com/');
